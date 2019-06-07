@@ -1,0 +1,26 @@
+\section{Fundamentação Teórica} \label{sec:trabalhos_relacioandos}
+ Nesta seção, apresentaremos uma breve introdução sobre conceitos básicos de teste baseados em propriedade. Iniciaremos apontando a definição do que são propriedades. Após isto, indicaremos uma explicação do que são testes baseados em propriedades, comparando-os com testes unitários e apresentando bibliotecas que utilizam estes testes. %Por fim, indicaremos geradores, elemento importante para criação e automatização destes testes.
+ 
+ \subsection{Propriedade}
+ %\todo[inline]{DEFINIÇÃO DE PROPRIEDADE}
+ O primeiro passo de teste baseado em propriedade é selecionar uma propriedade de um conjunto de propriedades genéricas, ou escolher alguma especifica do programa \cite{fink1997property}. As propriedades são regras gerais que descrevem o comportamento de um programa \cite{9781680506211}, em que devem ser aplicadas logicamente para todos os tipos de entradas e saídas, para cada trecho de código. Elas são operadas em alto nível, descrevendo genericamente o resultado esperado de uma operação. 
+ %Ele também mostra a presença de defeitos, e não ausência, sendo este um princípio do Teste de Software \cite{delamaro2017introduccao}. 
+ 
+ \subsection{Teste Baseado a Propriedades}
+ %\todo[inline]{O QUE SÃO TESTE BASEADOS EM PROPRIEDADE}
+ Testes baseados em propriedade tem como característica a especificação de diversas propriedades para garantir ao usuário que o programa atenda a propriedade declarada \cite{fink1997property}. Ele visa aproveitar os princípios e expectativas em relação ao comportamento do código e usá-los diretamente como um teste, ao invés de exemplos específicos. 
+ %O primeiro passo é parar de pensar que o property-based testing é sobre testes. É sobre propriedades. \cite{9781680506211}
+ %Quando esses testes são difundidos, ele tende a revelar mais falhas que não poderiam ser mostrado com exemplos.
+ 
+ %\todo[inline]{diferenças de testes unitários}
+ %procurar citação
+ A qualidade dos testes de unidade tradicionais é puramente determinada pela habilidade do programador de pensar em todos os casos a serem cobertos, que é definida pela experiência, atenção a detalhes e conhecimento geral do programa. A expectativa do teste baseado em propriedade seria poder definir uma propriedade genérica que cobriria qualquer entrada passada para o programa de modo que cenários desconhecidos possam ser detectados. As ferramentas utilizadas nos testes baseados em propriedade proveem métodos para a geração de entradas aleatórias que exercitem as partes a serem testadas.
+ 
+ %\todo[inline]{bibliotecas que utilizam}
+ Dentre as bibliotecas que utilizam esta abordagem de teste, a mais conhecida é QuickCheck \footnote{Link do QuickCheck - http://hackage.haskell.org/package/QuickCheck}, para Haskell, que serviu de inspiração para diversos outros frameworks e bibliotecas. PropEr \footnote{Github do propEr - https://github.com/proper-testing/proper}, framework para Erlang; SwiftCheck \footnote{Github do SwiftCheck - https://github.com/typelift/SwiftCheck}, biblioteca para Swift; JSverify \footnote{Github do JSVerify - https://github.com/jsverify/jsverify}, para JavaScript; FsCheck \footnote{Github do FsCheck - https://github.com/fscheck/FsCheck}, ferramenta para .NET; junit-quickcheck\footnote{Github do junit-quickcheck - https://github.com/pholser/junit-quickcheck}, biblioteca que suporta escrita e execução de testes baseado em propriedade no JUnit do Java e Rantly \footnote{Github do Rantly - https://github.com/hayeah/rantly}, para Ruby são exemplos de ferramentas que sofreram influencia direta do QuickCheck.
+ 
+ Além desta, existem outras aplicações como Steam\_data\footnote{Github do Steam\_Data - https://github.com/whatyouhide/stream\_data}, para geração de dados e teste baseado em propriedades para Elixir; GOlang Property TestER\footnote{Github do GopTer - https://github.com/leanovate/gopter}, biblioteca para GO e Hypothesis \footnote{Github do Hypothesis - https://github.com/HypothesisWorks/hypothesis}, é uma biblioteca avançada com implementações para Python, Ruby e Java.
+
+ %\subsection{Geradores}
+ 
+ %\todo[inline]{GERADORES}
