@@ -1,0 +1,19 @@
+\section{Background} \label{sec:back}
+
+	In this section we present a brief introduction to the basic concepts of Property Based Test (PBT). We start pointing the definition of properties. After, we explain the definition of PBT, comparing it with unity tests and presenting libraries that use this type of test.
+	  
+	\subsection{Property}
+	
+	Properties are general rules that describe the behavior of a algorithm and most be applied for each code snippet input and output~\cite{9781680506211}. The properties are written and operated in a high level, describing generically the result of each operation.
+	The work of ~\cite{fink1997property}, defines that the first step to making a PTB is to select a property of a generic set of properties, or choose a program specifics.
+	 
+	\subsection{Property Based Test}
+
+	PBT has as characteristic to specify many properties that aim user's garantee that a algorithm answers to a given property ~\cite{fink1997property}. Besides that, PBT aims to take the principles and expectations towards the code behavior and use as test, instead of specifics examples.
+
+	A qualidade dos testes de unidade tradicionais é puramente determinada pela habilidade do programador de pensar em todos os casos a serem cobertos, que é definida pela experiência, atenção a detalhes e conhecimento geral do programa. A expectativa do teste baseado em propriedade seria poder definir uma propriedade genérica que cobriria qualquer entrada passada para o programa de modo que cenários desconhecidos possam ser detectados. As ferramentas utilizadas nos testes baseados em propriedade proveem métodos para a geração de entradas aleatórias que exercitem as partes a serem testadas.
+	 
+	 %\todo[inline]{bibliotecas que utilizam}
+	 Dentre as bibliotecas que utilizam esta abordagem de teste, a mais conhecida é QuickCheck \footnote{Link do QuickCheck - http://hackage.haskell.org/package/QuickCheck}, para Haskell, que serviu de inspiração para diversos outros frameworks e bibliotecas. PropEr \footnote{Github do propEr - https://github.com/proper-testing/proper}, framework para Erlang; SwiftCheck \footnote{Github do SwiftCheck - https://github.com/typelift/SwiftCheck}, biblioteca para Swift; JSverify \footnote{Github do JSVerify - https://github.com/jsverify/jsverify}, para JavaScript; FsCheck \footnote{Github do FsCheck - https://github.com/fscheck/FsCheck}, ferramenta para .NET; junit-quickcheck\footnote{Github do junit-quickcheck - https://github.com/pholser/junit-quickcheck}, biblioteca que suporta escrita e execução de testes baseado em propriedade no JUnit do Java e Rantly \footnote{Github do Rantly - https://github.com/hayeah/rantly}, para Ruby são exemplos de ferramentas que sofreram influencia direta do QuickCheck.
+	 
+	 Além desta, existem outras aplicações como Steam\_data\footnote{Github do Steam\_Data - https://github.com/whatyouhide/stream\_data}, para geração de dados e teste baseado em propriedades para Elixir; GOlang Property TestER\footnote{Github do GopTer - https://github.com/leanovate/gopter}, biblioteca para GO e Hypothesis \footnote{Github do Hypothesis - https://github.com/HypothesisWorks/hypothesis}, é uma biblioteca avançada com implementações para Python, Ruby e Java.
