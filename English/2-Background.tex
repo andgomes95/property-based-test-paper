@@ -9,11 +9,27 @@
 	 
 	\subsection{Property Based Test}
 
-	PBT has as characteristic to specify many properties that aim user's garantee that a algorithm answers to a given property ~\cite{fink1997property}. Besides that, PBT aims to take the principles and expectations towards the code behavior and use as test, instead of specifics examples.
+	PBT has as characteristic to specify many properties that aim user's garantee that a algorithm answers to a given property ~\cite{fink1997property}. Besides that, PBT aims to take the principles and expectations towards the code behavior and use as test, instead of specifics examples. The quality of unity test are determinated by the programmer's hability in thinking coverage cases, which is given by his expertise, attention to details and code's general knowledge. The expectation in PBT is to define a generic property that could cover any entry of the code, and the most uncertain and unknown scenarios could be detected.
 
-	A qualidade dos testes de unidade tradicionais é puramente determinada pela habilidade do programador de pensar em todos os casos a serem cobertos, que é definida pela experiência, atenção a detalhes e conhecimento geral do programa. A expectativa do teste baseado em propriedade seria poder definir uma propriedade genérica que cobriria qualquer entrada passada para o programa de modo que cenários desconhecidos possam ser detectados. As ferramentas utilizadas nos testes baseados em propriedade proveem métodos para a geração de entradas aleatórias que exercitem as partes a serem testadas.
-	 
-	 %\todo[inline]{bibliotecas que utilizam}
-	 Dentre as bibliotecas que utilizam esta abordagem de teste, a mais conhecida é QuickCheck \footnote{Link do QuickCheck - http://hackage.haskell.org/package/QuickCheck}, para Haskell, que serviu de inspiração para diversos outros frameworks e bibliotecas. PropEr \footnote{Github do propEr - https://github.com/proper-testing/proper}, framework para Erlang; SwiftCheck \footnote{Github do SwiftCheck - https://github.com/typelift/SwiftCheck}, biblioteca para Swift; JSverify \footnote{Github do JSVerify - https://github.com/jsverify/jsverify}, para JavaScript; FsCheck \footnote{Github do FsCheck - https://github.com/fscheck/FsCheck}, ferramenta para .NET; junit-quickcheck\footnote{Github do junit-quickcheck - https://github.com/pholser/junit-quickcheck}, biblioteca que suporta escrita e execução de testes baseado em propriedade no JUnit do Java e Rantly \footnote{Github do Rantly - https://github.com/hayeah/rantly}, para Ruby são exemplos de ferramentas que sofreram influencia direta do QuickCheck.
-	 
-	 Além desta, existem outras aplicações como Steam\_data\footnote{Github do Steam\_Data - https://github.com/whatyouhide/stream\_data}, para geração de dados e teste baseado em propriedades para Elixir; GOlang Property TestER\footnote{Github do GopTer - https://github.com/leanovate/gopter}, biblioteca para GO e Hypothesis \footnote{Github do Hypothesis - https://github.com/HypothesisWorks/hypothesis}, é uma biblioteca avançada com implementações para Python, Ruby e Java.
+	\begin{table}[ht]
+		\begin{center}
+		    \begin{tabular}{|r|r|r|}
+		    \hline
+		    \textbf{Library} & \textbf{Language} & \textbf{Reference} \\ \hline
+		    QuickCheck & Haskell & ~\cite{quickcheck} \\ \hline
+		    PropEr & Erlang & ~\cite{proper} \\ \hline
+		    SwiftCheck & Swift & ~\cite{swiftcheck} \\ \hline
+		    JSverify & JavaScript & ~\cite{jsverify} \\ \hline
+		    FsCheck & .NET & ~\cite{fscheck} \\ \hline
+		    JUnit-QuickCheck & Java & ~\cite{junit} \\ \hline
+		    Rantly & Ruby & ~\cite{rantly} \\ \hline
+		    Stream Data & Elixir & ~\cite{stream} \\ \hline
+		    GOlang Property TestER (GopTer) & GO & ~\cite{gopter} \\ \hline
+		    Hypothesis & Python/Ruby/Java & ~\cite{hyp} \\ \hline 
+	    	\end{tabular}
+		\end{center}
+		\label{tab:libraries}
+		\caption{Avalible PBT libraries}
+	\end{table}
+
+	The tools for PBT has as principle the generation of random entries that exercise code different parts. In Table ~\ref{tab:libraries} lists the available libraries for PBT in different programming languages. Between these libraries the most used is QuickCheck for Haskell. QuickCheck works by random testing the program properties ~\cite{quickcheck}. Thus, the programmer provides a program specification in the form properties which function should satisfy, then QuickCheck run a multiple randomly generated test cases. This library served as base for other frameworks and libraries as: ProPer, SwiftCheck, JSVerify, FsCheck, JUnit-QuickCheck e Rantly. QuickCheck works by providing a code specification, in the form of properties which functions should satisfy,  ~\cite{quickcheck}. Other proposed libraries which are not based in QuickCheck is also available as StreamData, GOland Property TestER and Hypothesis. 
